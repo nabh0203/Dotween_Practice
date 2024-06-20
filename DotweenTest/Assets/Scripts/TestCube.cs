@@ -7,6 +7,8 @@ public class TestCube : MonoBehaviour
 {
     void Start()
     {
-        transform.DOShakePosition(10f);    
+        //transform.DOShakePosition(10f);    
+        var targetScale = new Vector3(2, 3, 2);
+        transform.DOScale(targetScale, 3f);
     }
 }
