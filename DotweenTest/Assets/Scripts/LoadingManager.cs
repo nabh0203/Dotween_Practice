@@ -67,6 +67,9 @@ public class LoadingManager : MonoBehaviour
     {
         loading.SetActive(true);
 
+        //AsyncOperation 는 비동기 신 이동을 위해 사용한다.
+        //사용하게 된다면 하이라키창에 다음으로 이동되는 신이 로드되고 신이 끝나면 로드 한다.
+        //이러한 방식은 기존의 LoadScene에서 발생되는 렉을 줄일수 있는 효과적인 방법이다.
         AsyncOperation async = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
         async.allowSceneActivation = false;
         float pastTime = 0;
